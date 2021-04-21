@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HealthPickUp : MonoBehaviour
+public class magicPickUp : MonoBehaviour
 {
     public bool interactable;
     public StatScript stat;
@@ -36,8 +36,8 @@ public class HealthPickUp : MonoBehaviour
 
     public void PickUpObject()
     {
-        stat.hpMax += 10;
-        stat.hpCurrent += 10;
+        stat.mpMax += 10;
+        stat.mpCurrent += 10;
         Destroy(gameObject);
     }
 }

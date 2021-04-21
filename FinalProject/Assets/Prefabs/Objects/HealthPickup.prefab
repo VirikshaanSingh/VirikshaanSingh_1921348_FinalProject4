@@ -140,3 +140,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 0
+  stat: {fileID: 4983543768643641680, guid: 27685b5f50dbb9b4fba04c624e1dfb63, type: 3}

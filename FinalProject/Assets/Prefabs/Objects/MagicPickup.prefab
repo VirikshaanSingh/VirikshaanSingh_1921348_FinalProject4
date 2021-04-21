@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7843511942666234912}
   - component: {fileID: 4778193993221096373}
   - component: {fileID: 2086700827340286921}
+  - component: {fileID: -982304528596847550}
   m_Layer: 0
   m_Name: MagicPickup
   m_TagString: Untagged
@@ -126,3 +127,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
+--- !u!114 &-982304528596847550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843511942666234913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d7388d90288094b88861336f72b3fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: 0
+  stat: {fileID: 4983543768643641680, guid: 27685b5f50dbb9b4fba04c624e1dfb63, type: 3}

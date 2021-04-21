@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 34151027965068551}
   - component: {fileID: 34151027965068548}
-  - component: {fileID: 2187481682714992609}
   - component: {fileID: 6589440974556039726}
   - component: {fileID: 6589440974556039724}
   - component: {fileID: 6589440974556039727}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: PlayerInWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,24 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2187481682714992609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34151027965068549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdaf6095e3b730c40b438491fa66bbee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityName: Player
-  hpMax: 100
-  hpCurrent: 100
-  mpMax: 30
-  mpCurrent: 30
-  damage: 10
 --- !u!50 &6589440974556039726
 Rigidbody2D:
   serializedVersion: 4
