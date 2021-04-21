@@ -14,7 +14,7 @@ public class PortalController : MonoBehaviour
 
     IEnumerator CombatTransition()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
         yield return new WaitForSeconds(5f);
     }
 }
