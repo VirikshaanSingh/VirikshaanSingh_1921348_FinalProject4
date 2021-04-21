@@ -29,7 +29,7 @@ public class CombatTracker : MonoBehaviour
     {
         combatState = CombatSystem.Start;
         StartCoroutine(CombatSetup());
-        halfHp = enemyStats.hpMax / 2;
+        halfHp = enemyStats.hpMax / 3;
     }
 
     private void Update()

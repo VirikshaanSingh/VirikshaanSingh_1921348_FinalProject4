@@ -3237,7 +3237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 34151028410096029, guid: 0b052f379032bfa4888f68ba484d2640, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 6
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 34151028410096029, guid: 0b052f379032bfa4888f68ba484d2640, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
@@ -3262,6 +3262,28 @@ PrefabInstance:
     - target: {fileID: 34151028410096029, guid: 0b052f379032bfa4888f68ba484d2640, type: 3}
       propertyPath: dialogue.sentences.Array.data[5]
       value: Collect 3 circles to open the door to the boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 34151028410096029, guid: 0b052f379032bfa4888f68ba484d2640, type: 3}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: You can deal damage to the boss with an attack, and it will do the same
+        to you
+      objectReference: {fileID: 0}
+    - target: {fileID: 34151028410096029, guid: 0b052f379032bfa4888f68ba484d2640, type: 3}
+      propertyPath: dialogue.sentences.Array.data[7]
+      value: Your magic attacks are more powerful, but they are limited by your magic
+        pool (MP)
+      objectReference: {fileID: 0}
+    - target: {fileID: 34151028410096029, guid: 0b052f379032bfa4888f68ba484d2640, type: 3}
+      propertyPath: dialogue.sentences.Array.data[8]
+      value: You can heal yourself if you take too much damage, and so can the boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 34151028410096029, guid: 0b052f379032bfa4888f68ba484d2640, type: 3}
+      propertyPath: dialogue.sentences.Array.data[9]
+      value: Be careful, the boss gets stronger the more damage it takes
+      objectReference: {fileID: 0}
+    - target: {fileID: 34151028410096029, guid: 0b052f379032bfa4888f68ba484d2640, type: 3}
+      propertyPath: dialogue.sentences.Array.data[10]
+      value: Best of luck :)
       objectReference: {fileID: 0}
     - target: {fileID: 1393231807768901504, guid: 0b052f379032bfa4888f68ba484d2640, type: 3}
       propertyPath: m_RootOrder
@@ -3321,11 +3343,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5214870917071812779, guid: 0b052f379032bfa4888f68ba484d2640, type: 3}
       propertyPath: m_Size.y
-      value: 1.46
+      value: 0.00294929
       objectReference: {fileID: 0}
     - target: {fileID: 5214870917071812779, guid: 0b052f379032bfa4888f68ba484d2640, type: 3}
       propertyPath: m_Offset.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214870917071812779, guid: 0b052f379032bfa4888f68ba484d2640, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.033116486
       objectReference: {fileID: 0}
     - target: {fileID: 5214870917071812779, guid: 0b052f379032bfa4888f68ba484d2640, type: 3}
       propertyPath: m_IsTrigger
