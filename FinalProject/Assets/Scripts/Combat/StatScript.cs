@@ -9,6 +9,12 @@ public class StatScript : MonoBehaviour
     public int mpCurrent;
     public int damage;
 
+    private void Start()
+    {
+        hpCurrent = hpMax;
+        mpCurrent = mpMax;
+    }
+
     public bool AttackDamage(int dmg)
     {
         hpCurrent -= dmg;

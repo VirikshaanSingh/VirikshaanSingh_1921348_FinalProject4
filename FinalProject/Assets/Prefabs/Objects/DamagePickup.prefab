@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 490340918318522984}
   - component: {fileID: 2907149320287948285}
   - component: {fileID: 8566613543413147009}
+  - component: {fileID: -6874217915053942947}
   m_Layer: 0
   m_Name: DamagePickup
   m_TagString: Untagged
@@ -126,3 +127,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
+--- !u!114 &-6874217915053942947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490340918318522985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a591ecfcc3a45ec46b18d9824f2cf76f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: 0
+  stat: {fileID: 286998307315745763, guid: 62ee5766ff52b634c8c7ca56db03e6cd, type: 3}

@@ -21,11 +21,15 @@ public class CombatTracker : MonoBehaviour
     public Button fleeButton;
     public Animator cameraAnim;
     public CombatSystem combatState;
+    int turnChoice;
+    int halfHp;
+    bool isDead;
 
     private void Start()
     {
         combatState = CombatSystem.Start;
         StartCoroutine(CombatSetup());
+        halfHp = enemyStats.hpMax / 2;
     }
 
     private void Update()
@@ -62,11 +66,11 @@ public class CombatTracker : MonoBehaviour
     IEnumerator PlayerAttack()
     {
         playerStats.damage = Random.Range(1, 16);
-        bool isDead = enemyStats.AttackDamage(playerStats.damage);
+        isDead = enemyStats.AttackDamage(playerStats.damage);
         enemyHud.SetHp(enemyStats.hpCurrent);
         trackerText.text = "You deal " + playerStats.damage.ToString() + " damage!";
         yield return new WaitForSeconds(2f);
-
+        
         if (isDead)
         {
             combatState = CombatSystem.Win;
@@ -93,24 +97,56 @@ public class CombatTracker : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
-        enemyStats.damage = Random.Range(1, 16);
-        CameraShake();
-        bool isDead = playerStats.AttackDamage(enemyStats.damage);
-        playerHud.SetHp(playerStats.hpCurrent);
-        trackerText.text = "The Enemy deals " + enemyStats.damage.ToString() + " damage!";
-        yield return new WaitForSeconds(2f);
+        turnChoice = Random.Range(1, 7);
 
-        if (isDead)
+        if (turnChoice >= 3)
         {
-            combatState = CombatSystem.Lose;
-            EndFight();
+            if (enemyStats.hpCurrent <= halfHp)
+            {
+                enemyStats.damage = (Random.Range(1, 16) * 2);
+                CameraShake();
+                isDead = playerStats.AttackDamage(enemyStats.damage);
+                playerHud.SetHp(playerStats.hpCurrent);
+                trackerText.text = "The Enemy deals " + enemyStats.damage.ToString() + " damage!";
+                yield return new WaitForSeconds(2f);
+            }
+
+            else
+            {
+                enemyStats.damage = Random.Range(1, 16);
+                CameraShake();
+                isDead = playerStats.AttackDamage(enemyStats.damage);
+                playerHud.SetHp(playerStats.hpCurrent);
+                trackerText.text = "The Enemy deals " + enemyStats.damage.ToString() + " damage!";
+                yield return new WaitForSeconds(2f);
+            }
+            
+
+            if (isDead)
+            {
+                combatState = CombatSystem.Lose;
+                EndFight();
+            }
+
+            else
+            {
+                combatState = CombatSystem.PlayerTurn;
+                PlayerTurn();
+            }
         }
 
-        else
+        else if (turnChoice <= 2)
         {
+            Instantiate(healEffect, enemySpawn.transform.position, Quaternion.identity);
+            enemyStats.Heal(10);
+            enemyHud.SetHp(enemyStats.hpCurrent);
+            trackerText.text = "Enemy heals 10 points!";
+            yield return new WaitForSeconds(2f);
             combatState = CombatSystem.PlayerTurn;
             PlayerTurn();
         }
+
+        
     }
 
     IEnumerator PlayerMagic()

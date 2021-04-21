@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DamagePickUp : MonoBehaviour
+public class HealthPickUp : MonoBehaviour
 {
     public bool interactable;
     public StatScript stat;
