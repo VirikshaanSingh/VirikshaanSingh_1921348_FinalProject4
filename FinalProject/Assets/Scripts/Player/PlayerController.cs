@@ -4,8 +4,8 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
     public Rigidbody2D playerRB;
+    public SpriteRenderer playerSprite;
     Vector2 movement;
-
     private void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
